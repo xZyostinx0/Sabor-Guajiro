@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  background: #f4f4f9;
+  color: #333;
+}
+
+/*  SIDEBAR */
+.sidebar {
+  width: 220px;
+  background: #6b2d1a;
+  color: white;
+  height: 100vh;
+  padding: 20px;
+  position: fixed;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.3rem;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  padding: 8px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background: #ac8900;
+  color: #6e3827;
+}
+
+/* ===== LOGO EN SIDEBAR ===== */
+.sidebar .logo {
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.sidebar .logo img {
+  max-width: 80%;   /* ocupa máximo el 80% del ancho del aside */
+  height: auto;     /* mantiene proporción */
+  display: block;
+  margin: 0 auto 10px auto; /* centra la imagen */
+}
+
+.sidebar .logo h2 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: white;
+  word-wrap: break-word; /* por si el nombre es largo */
+}
+
+
+/*  MAIN CONTENT  */
+.main-content {
+  margin-left: 220px;
+  padding: 20px;
+  width: 100%;
+}
+
+header {
+  background: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* CARDS  */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  color: #6b2d1a;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+
+.btn-small:hover {
+  background: #8b3a22;
+}
+
+
+/*  TABLAS GENERALES */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+table thead {
+  background: #6b2d1a;
+  color: white;
+  text-align: left;
+}
+
+table th, table td {
+  padding: 14px 16px;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #eee;
+}
+
+table tbody tr:hover {
+  background: #fdf2e9;
+  transition: background 0.3s;
+}
+
+table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/*  BOTONES EN TABLA  */
+.deleteBtn, #addDishBtn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.deleteBtn:hover {
+  background: #c0392b;
+  transform: scale(1.05);
+}
+
+#addDishBtn {
+  background: #27ae60;
+  margin-bottom: 10px;
+}
+
+#addDishBtn:hover {
+  background: #219150;
+  transform: scale(1.05);
+}
+
+/*  CELDAS EDITABLES EN MENÚ  */
+.editable {
+  background: #f9f9f9;
+  cursor: text;
+  transition: background 0.3s;
+}
+
+.editable:focus {
+  background: #fff8e1;
+  outline: 2px solid #f39c12;
+}
+
+/* ===== SELECT DE ESTADO (Disponible/Agotado) ===== */
+.estadoSelect {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+  background: #fff;
+  cursor: pointer;
+}
+
+.estadoSelect option[value="Disponible"] {
+  color: green;
+  font-weight: bold;
+}
+
+.estadoSelect option[value="Agotado"] {
+  color: red;
+  font-weight: bold;
+}
+
+
+/* Botón eliminar pedido */
+.eliminarBtn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.eliminarBtn:hover {
+  background: #c0392b;
+}
+

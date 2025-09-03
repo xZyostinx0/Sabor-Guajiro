@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Administrativo - Sabor Guajiro</title>
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="css/admin_historial.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+  <div class="logo">
+    <img src="img/logo.png" alt="Logo Restaurante">
+    <h2>Restaurante</h2>
+  </div>
+  <ul>
+    <li><a href="#"> opsion 1</a></li>
+    <li><a href="egresos.html"> Egresos</a></li>
+    <li><a href="#"> opsion 3</a></li>
+    <li><a href="#"> opsion 4</a></li>
+    <li><a href="index.html" id="logoutBtn"> cerrar sesion</a></li>
+  </ul>
+</aside>
+
+
+  <div class="main-content">
+
+    <header>
+      <h1>Panel Administrativo</h1>
+      <div class="header-actions">
+        <p>Bienvenido, <strong>admin</strong></p>
+      </div>
+    </header>
+
+    <section class="cards">
+      <!-- Tarjeta de Pedidos -->
+      <div class="card">
+        <h3>Pedidos</h3>
+        <p id="totalPedidos">0</p>
+      </div>
+
+      <!-- Tarjeta de Egresos -->
+      <div class="card">
+        <h3>Egresos</h3>
+        <p id="totalEgresos">$0</p>
+      </div>
+
+      <!-- Tarjeta de Ingresos -->
+      <div class="card">
+        <h3>Ingresos</h3>
+        <p id="totalIngresos">$0</p>
+      </div>
+    </section>
+
+    <section class="historial">
+
+      <!-- TABLA DE INGRESOS -->
+      <h2>Historial de Ingresos</h2>
+      <table id="tablaIngresos">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Descripción</th>
+            <th>Monto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Se llena con JS -->
+        </tbody>
+      </table>
+
+      <!-- TABLA DE EGRESOS -->
+      <h2>Historial de Egresos</h2>
+      <table id="tablaEgresos">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Descripción</th>
+            <th>Monto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Se llena con JS -->
+        </tbody>
+      </table>
+    </section>
+
+
+
+    <section class="panel-content">
+      <h2>Gestión del Menú</h2>
+
+      <button id="addDishBtn">Agregar Plato</button>
+
+      <table id="menuTable">
+        <thead>
+          <tr>
+            <th>Plato</th>
+            <th>Precio</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Los platos se cargan aquí -->
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <section class="panel-content">
+    <h2>Pedidos</h2>
+    <table id="pedidosTable">
+      <thead>
+        <tr>
+          <th>Mesa</th>
+          <th>Plato</th>
+          <th>Precio</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Los pedidos cargan aquí -->
+      </tbody>
+    </table>
+  </section>
+
+
+
+
+  <script src="js/admin.js"></script>
+  <script src="js/admin_historial.js"></script>
+</body>
+</html>
+

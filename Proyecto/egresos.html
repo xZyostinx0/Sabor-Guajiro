@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registrar Egreso</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <aside>
+    <a href="admin.html">⬅ Volver al panel</a>
+  </aside>
+
+  <main>
+    <h2>Registrar Egreso</h2>
+    <form id="egresoForm">
+      <label>Descripción:</label>
+      <input type="text" id="descripcion" required>
+
+      <label>Cantidad:</label>
+      <input type="number" id="cantidad" required>
+
+      <button type="submit">Guardar</button>
+    </form>
+  </main>
+
+  <script>
+    document.getElementById("egresoForm").addEventListener("submit", e => {
+      e.preventDefault();
+      let cantidad = parseFloat(document.getElementById("cantidad").value);
+      let totalEgresos = localStorage.getItem("egresos") 
+        ? parseFloat(localStorage.getItem("egresos")) 
+        : 0;
+      totalEgresos += cantidad;
+      localStorage.setItem("egresos", totalEgresos);
+      alert("Egreso registrado ✅");
+      window.location.href = "admin.html";
+    });
+  </script>
+</body>
+</html>

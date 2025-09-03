@@ -1,0 +1,38 @@
+/* diseño del historial*/
+
+/* margen superior */
+.historial {
+  margin-top: 30px;
+}
+
+/* diseño de los titulos h2 en el historial */
+.historial h2 {
+  margin: 20px 0 10px;
+  color: #6b2d1a;
+}
+
+.filtro-fecha {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.filtro-fecha input, 
+.filtro-fecha button {
+  padding: 6px 10px;
+  font-size: 0.9rem;
+}
+
+.filtro-fecha button {
+  background: #6b2d1a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.filtro-fecha button:hover {
+  background: #8b3a22;
+}
